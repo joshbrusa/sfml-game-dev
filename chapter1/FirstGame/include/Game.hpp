@@ -11,12 +11,19 @@ public:
 
 private:
     void processEvents();
-    void update();
+    void update(sf::Time elapsedTime);
     void render();
+    void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
 
 private:
+    static const float PlayerSpeed;
+    static const sf::Time TimePerFrame;
     sf::RenderWindow window;
-    sf::CircleShape circle;
+    sf::CircleShape player;
+    bool isMovingUp;
+    bool isMovingDown;
+    bool isMovingLeft;
+    bool isMovingRight;
 };
 
 #endif
