@@ -10,16 +10,13 @@ public:
     void run();
 
 private:
-    int count;
+    void processEvents();
+    void update();
+    void render();
 
-    // private:
-    //     void processEvents();
-    //     void update();
-    //     void render();
-
-    // private:
-    //     sf::RenderWindow window;
-    //     sf::CircleShape circle;
+private:
+    sf::RenderWindow window;
+    sf::CircleShape circle;
 };
 
 #endif
