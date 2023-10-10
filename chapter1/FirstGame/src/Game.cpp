@@ -6,13 +6,17 @@ const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f / 60.f);
 
 Game::Game()
-    : window(sf::VideoMode(640, 480), "SFML Application"), player(),
+    : window(sf::VideoMode(640, 480), "SFML Application"), texture(), player(),
       isMovingUp(false), isMovingDown(false), isMovingLeft(false),
       isMovingRight(false)
 {
-    player.setRadius(40.f);
+    if (!texture.loadFromFile("../images/Eagle.png"))
+    {
+        // handle error
+    }
+
+    player.setTexture(texture);
     player.setPosition(100.f, 100.f);
-    player.setFillColor(sf::Color::Cyan);
 };
 
 void Game::run()

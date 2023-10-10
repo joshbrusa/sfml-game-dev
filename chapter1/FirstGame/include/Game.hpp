@@ -18,8 +18,11 @@ private:
 private:
     static const float PlayerSpeed;
     static const sf::Time TimePerFrame;
+
     sf::RenderWindow window;
-    sf::CircleShape player;
+    sf::Texture texture;
+    sf::Sprite player;
+
     bool isMovingUp;
     bool isMovingDown;
     bool isMovingLeft;
