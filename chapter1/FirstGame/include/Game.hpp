@@ -22,6 +22,8 @@ private:
     sf::RenderWindow window;
     sf::Texture texture;
     sf::Sprite player;
+    sf::Font font;
+    sf::Text text;
 
     bool isMovingUp;
     bool isMovingDown;
