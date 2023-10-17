@@ -27,4 +27,4 @@ private:
 };
 
 #include "ResourceHolder.inl"
-#endif
+#endif // RESOURCEHOLDER_HPP
